@@ -21,10 +21,10 @@ public class UserService {
         var userIndex = IntStream.range(0, USERS_LIST.size())
                 .filter(i -> USERS_LIST.get(i).getEmail().equals(user.getEmail()))
                 .findAny()
-                .orElseThrow(() -> new RuntimeException("User not Found"));
+                .orElseThrow(() -> new RuntimeException("User not found"));
         var cUser = USERS_LIST.get(userIndex);
         if (!cUser.getPassword().equals(user.getPassword())) {
-            throw new RuntimeException("Password Incorrect");
+            throw new RuntimeException("Password incorrect");
         }
         cUser.setStatus("online");
         return cUser;
@@ -38,7 +38,7 @@ public class UserService {
         USERS_LIST.get(userIndex).setStatus("offline");
     }
 
-    public List<User> findAll(){
+    public List<User> findAll() {
         return USERS_LIST;
     }
 

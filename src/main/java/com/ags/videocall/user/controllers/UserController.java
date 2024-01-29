@@ -19,28 +19,28 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 @Slf4j
 public class UserController {
 
-    private final UserService userService;
+    private final UserService service;
 
     @PostMapping
     public void register(
             @RequestBody User user
     ) {
-        userService.register(user);
+        service.register(user);
     }
 
     @PostMapping("/login")
     public User login(@RequestBody User user) {
-        return userService.login(user);
+        return service.login(user);
     }
 
     @PostMapping("/logout")
     public void logout(@RequestBody User email) {
-        userService.logout(email.getEmail());
+        service.logout(email.getEmail());
     }
 
     @GetMapping
     public List<User> findAll() {
-        return userService.findAll();
+        return service.findAll();
     }
 
     @ExceptionHandler(Exception.class)
