@@ -22,18 +22,20 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public void register(User user) {
+    public void register(
+            @RequestBody User user
+    ) {
         userService.register(user);
     }
 
     @PostMapping("/login")
-    public User login(User user) {
+    public User login(@RequestBody User user) {
         return userService.login(user);
     }
 
     @PostMapping("/logout")
-    public void logout(String email) {
-        userService.logout(email);
+    public void logout(@RequestBody User email) {
+        userService.logout(email.getEmail());
     }
 
     @GetMapping
