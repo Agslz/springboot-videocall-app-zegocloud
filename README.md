@@ -1,6 +1,6 @@
 # VideoCall App
 
-Esta es una aplicación de videollamadas desarrollada con Spring Boot para el backend y HTML, CSS, y JavaScript para el frontend. La aplicación utiliza ZegoCloud para habilitar las funciones de videollamadas y mensajería en tiempo real. Proporciona características como creación y unión a reuniones, envío de mensajes, uso de cámara y micrófono, generación de códigos de sala para compartir, seguridad mediante login, registro de usuarios, y visualización del estado de conexión de otros usuarios.
+Esta es una aplicación de videollamadas desarrollada con Spring Boot y Java para el backend y HTML, CSS, y JavaScript para el frontend. La aplicación utiliza ZegoCloud para habilitar las funciones de videollamadas y mensajería en tiempo real. Proporciona características como creación y unión a reuniones, envío de mensajes, uso de cámara y micrófono, generación de códigos de sala para compartir, seguridad mediante login, registro de usuarios, y visualización del estado de conexión de otros usuarios.
 
 ## Características principales
 
